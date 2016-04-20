@@ -52,7 +52,7 @@ for j in xp:
     if gerichtId in alreadyposted:
         print("skipping gericht {}, it was already posted".format(gerichtId))
 
-    SubmitResult = PrawInterface.submit(LOCATION, gerichtId, text="page hash {}".format(hash))
+    SubmitResult = PrawInterface.submit(LOCATION, gerichtId, text="page hash {}".format(pghash))
     PostURL = SubmitResult.url
 
     alreadyposted.add(gerichtId)
